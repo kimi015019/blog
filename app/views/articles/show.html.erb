@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @article.category %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @article.posted_date %>
+</p>
+
+<strong>Count:</strong>
+<%= @article.count %>
+</p>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<!--
+<button type="button" class="btn btn-primary">
+
+  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> iine!
+</button>
+-->
+
+<%= link_to countup_article_path(@article),class:"btn btn-primary" do %>
+  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> iine!
+<% end %>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
